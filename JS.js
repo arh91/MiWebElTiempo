@@ -5,19 +5,10 @@ const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 const apiKey = "89b9fdb6f95944991fd97b6727d65c78";
 let li = document.createElement("li");
-//const conex = "false"
-
-/* if(navigator.onLine) {
-  conex = "true";
-}else {
-  alert("No se pueden obtener los datos sin conexión a Internet. Conéctese a la Red e inténtelo de nuevo");
-} */
-
 
 
   form.addEventListener("submit", e => {
     e.preventDefault();
-    //const listItems = list.querySelectorAll(".ajax-section .city");
     const inputVal = select.value;
 
     
@@ -32,7 +23,6 @@ let li = document.createElement("li");
           const icon = `https://openweathermap.org/img/wn/${
             weather[0]["icon"]
           }@2x.png`;
-          //li.classList.add("city");
           const markup = `
             <h2 class="city-name" data-name="${name},${sys.country}">
               <span>${name}</span>
@@ -45,7 +35,6 @@ let li = document.createElement("li");
             </figure>
           `;
           li.innerHTML = markup;
-          //list.append(li);
         })
         .catch(() => {
           msg.textContent = "Este no es un nombre de ciudad valido";
@@ -58,7 +47,6 @@ let li = document.createElement("li");
       // Borra los elementos anteriores y agrega el último resultado
       list.innerHTML = '';
       list.appendChild(li);
-      //});
     }else {
       alert("No se pueden obtener los datos sin conexión a Internet. Conéctese a la Red e inténtelo de nuevo");
     }

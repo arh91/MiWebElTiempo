@@ -273,17 +273,7 @@
     text-decoration: none;
   }
 
-  #offline-message {
-    background-color: red;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: none; /* Ocultar inicialmente el mensaje */
-}
+
 
 
 
